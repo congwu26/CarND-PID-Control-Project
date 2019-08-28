@@ -2,7 +2,7 @@
 #define PID_H
 
 class PID {
- public:
+public:
   /**
    * Constructor
    */
@@ -31,7 +31,13 @@ class PID {
    */
   double TotalError();
 
- private:
+  /**
+   * Print the debug info of PID error variables.
+   * output the p_error, i_error, d_error
+   */
+  void PrintError();
+
+private:
   /**
    * PID Errors
    */
@@ -41,10 +47,10 @@ class PID {
 
   /**
    * PID Coefficients
-   */ 
+   */
   double Kp;
   double Ki;
   double Kd;
 };
 
-#endif  // PID_H
+#endif // PID_H
